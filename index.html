@@ -235,6 +235,72 @@
     .placeholder-icon { font-size: 2.5rem; opacity: 0.25; }
     .placeholder-label { font-size: 0.72rem; font-weight: 500; color: var(--muted); opacity: 0.5; }
     .case-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ── CAROUSEL ── */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      flex: 0 0 100%;
+      height: 100%;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(26,26,46,0.55);
+      color: #fff;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      z-index: 5;
+      transition: background 0.15s;
+    }
+    .carousel-arrow:hover { background: rgba(26,26,46,0.85); }
+    .carousel-arrow.prev { left: 10px; }
+    .carousel-arrow.next { right: 10px; }
+    .carousel-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .carousel-dot.active { background: #fff; transform: scale(1.2); }
     .case-body { padding: 2.25rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
     .case-company {
       font-size: 0.7rem;
@@ -379,7 +445,7 @@
     <div class="hero-eyebrow">Strategy, systems and execution</div>
     <h1>Fractional PM &amp; Operations Leader</h1>
     <p class="hero-sub">
-      From project management, sprint operations and product strategy to GTM systems and cross-functional alignment, I can help your team! I partner with start-ups as well as product, digital, and growth agencies to drive execution.
+      From project management, sprint operations and product strategy to GTM systems and cross-functional alignment, I can assist. I partner with start-ups as well as product, digital, and growth agencies.
     </p>
     <div class="hero-ctas">
       <a href="#work" class="btn btn-primary">See my work</a>
@@ -430,13 +496,18 @@
       <!-- Designs for Health -->
       <div class="case-card">
         <div class="case-img">
-          <div class="case-img-placeholder">
-            <div class="placeholder-icon">📸</div>
-            <div class="placeholder-label">Add a screenshot here</div>
+          <div class="carousel" data-carousel data-autoplay="4000">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/designs-for-health-1.png" alt="Designs for Health screenshot 1" /></div>
+              <div class="carousel-slide"><img src="images/designs-for-health-2.png" alt="Designs for Health screenshot 2" /></div>
+              <div class="carousel-slide"><img src="images/designs-for-health-3.png" alt="Designs for Health screenshot 3" /></div>
+              <div class="carousel-slide"><img src="images/designs-for-health-4.png" alt="Designs for Health screenshot 4" /></div>
+            </div>
+            <button class="carousel-arrow prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-arrow next" aria-label="Next slide">›</button>
+            <div class="carousel-dots"></div>
           </div>
         </div>
-        <div class="case-body">
-          <div class="case-company">Designs for Health · Project &amp; Product Manager</div>
           <h3>eCommerce website redesign with end-to-end checkout optimization</h3>
           <p>Led product discovery, strategy, and a full website redesign focused on eCommerce performance. Improved search, guest checkout, account creation, streamlined purchase flows and added additional payment methods to boost revenue. Owned discovery &amp; PRD, sprint planning, development build out, UAT, and launch.</p>
           <div class="case-meta">
@@ -450,9 +521,15 @@
       <!-- NKBA -->
       <div class="case-card">
         <div class="case-img">
-          <div class="case-img-placeholder">
-            <div class="placeholder-icon">📸</div>
-            <div class="placeholder-label">Add a screenshot here</div>
+          <div class="carousel" data-carousel data-autoplay="4000">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/nkba-1.png" alt="NKBA screenshot 1" /></div>
+              <div class="carousel-slide"><img src="images/nkba-2.png" alt="NKBA screenshot 2" /></div>
+              <div class="carousel-slide"><img src="images/nkba-3.png" alt="NKBA screenshot 3" /></div>
+            </div>
+            <button class="carousel-arrow prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-arrow next" aria-label="Next slide">›</button>
+            <div class="carousel-dots"></div>
           </div>
         </div>
         <div class="case-body">
@@ -470,9 +547,14 @@
       <!-- Filestack -->
       <div class="case-card">
         <div class="case-img">
-          <div class="case-img-placeholder">
-            <div class="placeholder-icon">📸</div>
-            <div class="placeholder-label">Add a screenshot here</div>
+          <div class="carousel" data-carousel data-autoplay="4000">
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/filestack-1.png" alt="Filestack screenshot 1" /></div>
+              <div class="carousel-slide"><img src="images/filestack-2.png" alt="Filestack screenshot 2" /></div>
+            </div>
+            <button class="carousel-arrow prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-arrow next" aria-label="Next slide">›</button>
+            <div class="carousel-dots"></div>
           </div>
         </div>
         <div class="case-body">
@@ -543,7 +625,7 @@
           <span class="skill-pill">Data &amp; Analytics</span>
           <span class="skill-pill">Cyber Security</span>
           <span class="skill-pill">Fashion</span>
-          <span class="skill-pill">Membership Associations</span>
+          <span class="skill-pill">Non Profit</span>
         </div>
       </div>
     </div>
@@ -567,6 +649,72 @@
 <footer>
   © 2026 Nicole Falzon · Built with purpose
 </footer>
+
+<script>
+  document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const dotsWrap = carousel.querySelector('.carousel-dots');
+    const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+    const nextBtn = carousel.querySelector('.carousel-arrow.next');
+    const autoplayMs = parseInt(carousel.dataset.autoplay || '0', 10);
+    let index = 0;
+    let timer = null;
+
+    if (slides.length <= 1) {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      return;
+    }
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function update() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === index);
+      });
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      update();
+      restartAutoplay();
+    }
+
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    function startAutoplay() {
+      if (autoplayMs > 0) {
+        timer = setInterval(next, autoplayMs);
+      }
+    }
+    function stopAutoplay() {
+      if (timer) clearInterval(timer);
+    }
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    nextBtn.addEventListener('click', next);
+    prevBtn.addEventListener('click', prev);
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    update();
+    startAutoplay();
+  });
+</script>
 
 </body>
 </html>
