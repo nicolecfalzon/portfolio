@@ -37,7 +37,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(247, 244, 239, 0.92);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
       padding: 0 2rem;
@@ -67,13 +67,17 @@
 
     /* ── HERO ── */
     .hero {
+      background: var(--white);
       min-height: 88vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 6rem 2rem 5rem;
+    }
+    .hero-inner {
       max-width: 900px;
       margin: 0 auto;
+      width: 100%;
     }
     .hero-eyebrow {
       font-size: 0.75rem;
@@ -109,7 +113,7 @@
     .hero-sub {
       font-size: 1.1rem;
       color: var(--muted);
-      max-width: 560px;
+      max-width: 580px;
       line-height: 1.75;
       margin-bottom: 2.5rem;
     }
@@ -132,38 +136,6 @@
     .btn-primary:hover { background: #235c41; }
     .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--border); }
     .btn-outline:hover { border-color: var(--ink); }
-
-    /* ── LOGOS ── */
-    .logos-bar {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-    .logos-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
-    .logos-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    .logo-item {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      color: #BBBAB5;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .logo-item:hover { color: var(--ink); }
 
     /* ── SECTIONS ── */
     section { padding: 6rem 2rem; }
@@ -192,6 +164,7 @@
     }
 
     /* ── SERVICES ── */
+    #services { background: var(--soft); }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -223,16 +196,6 @@
       color: var(--ink);
     }
     .service-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
-    .service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
-    .tag {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      padding: 3px 10px;
-      border-radius: 20px;
-      background: var(--accent-lt);
-      color: var(--accent);
-    }
 
     /* ── CASE STUDIES ── */
     #work { background: var(--white); }
@@ -242,8 +205,8 @@
       border-radius: 10px;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      min-height: 280px;
+      grid-template-columns: 1fr 1.6fr;
+      min-height: 260px;
       transition: box-shadow 0.2s;
     }
     .case-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
@@ -268,10 +231,9 @@
       align-items: center;
       justify-content: center;
       gap: 0.75rem;
-      color: var(--muted);
     }
-    .placeholder-icon { font-size: 2.5rem; opacity: 0.3; }
-    .placeholder-label { font-size: 0.75rem; font-weight: 500; color: var(--muted); opacity: 0.6; }
+    .placeholder-icon { font-size: 2.5rem; opacity: 0.25; }
+    .placeholder-label { font-size: 0.72rem; font-weight: 500; color: var(--muted); opacity: 0.5; }
     .case-img img { width: 100%; height: 100%; object-fit: cover; }
     .case-body { padding: 2.25rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
     .case-company {
@@ -284,11 +246,27 @@
     }
     .case-body h3 {
       font-family: var(--serif);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       line-height: 1.25;
       margin-bottom: 0.75rem;
+      color: var(--ink);
     }
     .case-body p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .meta-pill {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--soft);
+    }
     .case-metrics { display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .metric { display: flex; flex-direction: column; }
     .metric-val {
@@ -300,6 +278,7 @@
     .metric-label { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
 
     /* ── ABOUT ── */
+    #about { background: var(--soft); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -332,31 +311,6 @@
       color: var(--ink);
       background: var(--white);
     }
-
-    /* ── TESTIMONIALS ── */
-    #testimonials { background: var(--ink); }
-    #testimonials .section-eyebrow { color: #7DC9A3; }
-    #testimonials h2 { color: var(--white); }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .testimonial-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px;
-      padding: 1.75rem;
-    }
-    .testimonial-card blockquote {
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.8;
-      font-style: italic;
-      margin-bottom: 1.25rem;
-    }
-    .testimonial-author { font-size: 0.8rem; color: rgba(255,255,255,0.45); font-weight: 500; }
-    .testimonial-note { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 0.25rem; }
 
     /* ── CONTACT ── */
     #contact { background: var(--accent); }
@@ -420,28 +374,19 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-eyebrow">Strategy, systems and execution</div>
-  <h1>Fractional PM & Operations Leader</h1>
-  <p class="hero-sub">
-    I'm passionate about building digital products that excite users. I have over 10 years of experience scaling high-growth startups and launching digital products. </p>
-    I partner with product, digital, and growth agencies as fractional support, ranging from project management and sprint operations to GTM strategy and CRM/AI workflow configurations.
-  </p>
-  <div class="hero-ctas">
-    <a href="#work" class="btn btn-primary">See my work</a>
-    <a href="#contact" class="btn btn-outline">Get in touch</a>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Strategy, systems and execution</div>
+    <h1>Fractional PM &amp; Operations Leader</h1>
+    <p class="hero-sub">
+      I'm passionate about building digital products that excite users. With 10+ years scaling high-growth startups and launching digital products, I partner with product, digital, and growth agencies — from project management and sprint operations to GTM strategy and CRM/AI workflow configurations.
+    </p>
+    <div class="hero-ctas">
+      <a href="#work" class="btn btn-primary">See my work</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
   </div>
-</section>
-
-<!-- <!-- LOGOS BAR -->
-<div class="logos-bar">
-  <div class="logos-label">Companies assisted</div>
-  <div class="logos-row">
-    <span class="logo-item">ClassPass</span>
-    <span class="logo-item">PINATA</span>
-    <span class="logo-item">The UQ</span>
-  </div>
-</div> -->
+</div>
 
 <!-- SERVICES -->
 <section id="services">
@@ -452,27 +397,21 @@
     <div class="services-grid">
 
       <div class="service-card">
-        <div class="service-icon">🔍</div>
+        <div class="service-icon">🗺️</div>
         <h3>Product Management</h3>
-        <p>I help teams from discovery through launch including roadmap planning, product requirements, strategy & vision, sprint facilitation, and cross-functional delivery. </p>
-        <div class="service-tags">
-        </div>
+        <p>I help teams from discovery through launch — roadmap planning, product requirements, strategy &amp; vision, sprint facilitation, and cross-functional delivery.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Program &amp; Delivery</h3>
+        <p>End-to-end project leadership for complex, multi-stakeholder initiatives. I keep distributed teams aligned, scope in check, and execution on track.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon">⚙️</div>
         <h3>GTM Operations</h3>
-        <p> Lay the operational foundation to go-to-market including CRM infrastructure, sales workflows, onboarding systems, KPI development, and analytics.</p>
-        <div class="service-tags">
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Program & Delivery</h3>
-        <p>End-to-end project leadership for complex, multi-stakeholder initiatives. I keep distributed teams aligned, scope in check, and execution on track.</p>
-        <div class="service-tags">
-        </div>
+        <p>I help lay the operational foundation for your go-to-market strategy — including CRM infrastructure, sales workflows &amp; processes, customer journey, KPI development, analytics, and AI best practices.</p>
       </div>
 
     </div>
@@ -484,32 +423,36 @@
   <div class="section-inner">
     <div class="section-eyebrow">Selected work</div>
     <h2>Where I've driven impact</h2>
-    <p class="section-lead">A look at the types of problems I've owned, from 0→1 operations builds to complex multi-client product delivery.</p>
+    <p class="section-lead">A look at the types of problems I've owned — from full website redesigns to CRM transformations and ongoing product delivery.</p>
 
     <div class="case-studies">
 
-      <!-- ClassPass -->
+      <!-- Designs for Health -->
       <div class="case-card">
         <div class="case-img">
-          <!-- Replace src below with your screenshot -->
           <div class="case-img-placeholder">
             <div class="placeholder-icon">📸</div>
             <div class="placeholder-label">Add a screenshot here</div>
           </div>
         </div>
         <div class="case-body">
-          <div class="case-company">ClassPass · Partner Operations</div>
-          <h3>Scaling partner onboarding from 6 weeks to 10 days</h3>
-          <p>Redesigned the entire partner onboarding experience — replacing a manual, 6-week process with self-service tooling and tiered workflows that made international expansion actually possible. Led a team of 4 + 6 contractors across 5 countries.</p>
+          <div class="case-company">Designs for Health · Project &amp; Product Manager</div>
+          <h3>eCommerce website redesign with end-to-end checkout optimization</h3>
+          <p>Led product discovery, strategy, and a full website redesign focused on eCommerce performance — including improved search, guest checkout, account creation, and streamlined purchase flows. Owned the PRD, sprint planning, UAT, and launch.</p>
+          <div class="case-meta">
+            <span class="meta-pill">📅 1 year</span>
+            <span class="meta-pill">👥 10 engineers · 3 designers</span>
+            <span class="meta-pill">eCommerce</span>
+          </div>
           <div class="case-metrics">
-            <div class="metric"><span class="metric-val">6→10</span><span class="metric-label">weeks to days</span></div>
-            <div class="metric"><span class="metric-val">5,000+</span><span class="metric-label">partners supported</span></div>
-            <div class="metric"><span class="metric-val">5</span><span class="metric-label">countries launched</span></div>
+            <div class="metric"><span class="metric-val">0→1</span><span class="metric-label">product discovery &amp; launch</span></div>
+            <div class="metric"><span class="metric-val">Full</span><span class="metric-label">checkout redesign</span></div>
+            <div class="metric"><span class="metric-val">13</span><span class="metric-label">person team led</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Pinata -->
+      <!-- NKBA -->
       <div class="case-card">
         <div class="case-img">
           <div class="case-img-placeholder">
@@ -518,18 +461,23 @@
           </div>
         </div>
         <div class="case-body">
-          <div class="case-company">Pinata · Head of Operations</div>
-          <h3>Owning a full business model transition from usage-based to SaaS</h3>
-          <p>Led Pinata's GTM strategy, product positioning, and operational rebuild through a full model transition — including CRM infrastructure, monetization strategy, and a customer-facing ops team built from scratch.</p>
+          <div class="case-company">NKBA · Project &amp; Product Manager</div>
+          <h3>Website redesign and ongoing product delivery for a national trade association</h3>
+          <p>Redesigned the membership signup and renewal experience, then transitioned into an ongoing support retainer — managing the product backlog, roadmap oversight, sprint operations, and data analysis across a two-year engagement.</p>
+          <div class="case-meta">
+            <span class="meta-pill">📅 2 years</span>
+            <span class="meta-pill">👥 5 engineers · 1 designer</span>
+            <span class="meta-pill">Membership &amp; Association</span>
+          </div>
           <div class="case-metrics">
-            <div class="metric"><span class="metric-val">120%</span><span class="metric-label">net revenue retention</span></div>
-            <div class="metric"><span class="metric-val">50%</span><span class="metric-label">customer growth</span></div>
-            <div class="metric"><span class="metric-val">Series A</span><span class="metric-label">funding raised</span></div>
+            <div class="metric"><span class="metric-val">2 yrs</span><span class="metric-label">ongoing engagement</span></div>
+            <div class="metric"><span class="metric-val">Full</span><span class="metric-label">membership flow redesign</span></div>
+            <div class="metric"><span class="metric-val">Backlog</span><span class="metric-label">to launch ownership</span></div>
           </div>
         </div>
       </div>
 
-      <!-- The Unquantifiable -->
+      <!-- Filestack -->
       <div class="case-card">
         <div class="case-img">
           <div class="case-img-placeholder">
@@ -538,13 +486,18 @@
           </div>
         </div>
         <div class="case-body">
-          <div class="case-company">The Unquantifiable · Product Manager</div>
-          <h3>Delivering digital products across 7 client teams simultaneously</h3>
-          <p>Managed sprint operations, roadmap planning, and cross-functional delivery across clients ranging from University of Michigan Ross to Farm Aid. Translated client business goals into technical requirements while balancing scope, budget, and deadlines.</p>
+          <div class="case-company">Filestack · Salesforce Consultant</div>
+          <h3>Salesforce redesign built around how the sales team actually works</h3>
+          <p>Redesigned Filestack's Salesforce instance from the ground up to match the real workflow of the sales team — then built out a suite of reports and dashboards that gave leadership clear visibility into pipeline health and revenue forecasting.</p>
+          <div class="case-meta">
+            <span class="meta-pill">📅 1 year</span>
+            <span class="meta-pill">CRM &amp; Sales Operations</span>
+            <span class="meta-pill">Salesforce</span>
+          </div>
           <div class="case-metrics">
-            <div class="metric"><span class="metric-val">7</span><span class="metric-label">concurrent clients</span></div>
-            <div class="metric"><span class="metric-val">2 yrs</span><span class="metric-label">engagement</span></div>
-            <div class="metric"><span class="metric-val">Multi-phase</span><span class="metric-label">delivery</span></div>
+            <div class="metric"><span class="metric-val">Full</span><span class="metric-label">CRM rebuild</span></div>
+            <div class="metric"><span class="metric-val">Custom</span><span class="metric-label">pipeline dashboards</span></div>
+            <div class="metric"><span class="metric-val">Real-time</span><span class="metric-label">forecasting visibility</span></div>
           </div>
         </div>
       </div>
@@ -557,16 +510,18 @@
 <section id="about">
   <div class="section-inner">
     <div class="section-eyebrow">About me</div>
-    <h2>The through-line is always <em style="font-style:italic;color:var(--warm)">impact</em></h2>
+    <h2>Execution is my <em style="font-style:italic;color:var(--warm)">superpower</em></h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I've spent 10+ years at the intersection of operations, product, and growth — at companies that were moving fast and needed someone who could build the systems to keep up. What I've learned is that the best product work doesn't happen despite the operational foundation — it happens because of it.</p>
-        <p>At ClassPass, I was deep in the weeds with 5,000+ small business partners. At Pinata, I owned strategy and execution through a full business model transition. At The Unquantifiable, I ran parallel delivery across 7 client teams as a fractional PM. The common thread: I show up where the work is hard and stay until it's done right.</p>
-        <p>I work best with teams that value ownership, move quickly, and care about building things that actually serve the end user — not just check the box.</p>
+        <p>I've spent 10+ years working at the intersection of operations and product, helping high-growth companies turn strategy into execution. My career has been built around stepping into fast-moving environments, identifying what needs to be built, and leading cross-functional teams to deliver meaningful outcomes.</p>
+        <p>I'm energized by solving complex operational and product challenges, building scalable systems, and creating clarity where there isn't much structure. Whether launching new products, optimizing internal operations, or improving customer experiences, I enjoy connecting the dots between business strategy, user needs, and execution.</p>
+        <p>I do my best work with teams that move fast, embrace collaboration, and care deeply about building products and processes that create real value for customers.</p>
       </div>
       <div class="about-skills">
-        <h4>Operations & PM</h4>
+        <h4>Operations &amp; PM</h4>
         <div class="skills-list">
+          <span class="skill-pill">Project Management</span>
+          <span class="skill-pill">Program Management</span>
           <span class="skill-pill">Process Design</span>
           <span class="skill-pill">OKR Development</span>
           <span class="skill-pill">Roadmapping</span>
@@ -576,8 +531,11 @@
           <span class="skill-pill">Cross-functional Alignment</span>
           <span class="skill-pill">Stakeholder Management</span>
         </div>
-        <h4>Tools & Platforms</h4>
+        <h4>Tools &amp; Platforms</h4>
         <div class="skills-list">
+          <span class="skill-pill">Claude</span>
+          <span class="skill-pill">Replit</span>
+          <span class="skill-pill">Notion</span>
           <span class="skill-pill">Salesforce</span>
           <span class="skill-pill">HubSpot</span>
           <span class="skill-pill">Jira</span>
@@ -586,53 +544,34 @@
           <span class="skill-pill">Figma</span>
           <span class="skill-pill">SQL</span>
           <span class="skill-pill">Looker</span>
+          <span class="skill-pill">Sisense</span>
           <span class="skill-pill">Tableau</span>
           <span class="skill-pill">Zapier</span>
         </div>
         <h4>Industries</h4>
         <div class="skills-list">
           <span class="skill-pill">Digital Agencies</span>
-          <span class="skill-pill">Health & Wellness</span>
+          <span class="skill-pill">Health &amp; Wellness</span>
           <span class="skill-pill">SaaS / Marketplace</span>
           <span class="skill-pill">eCommerce</span>
-          <span class="skill-pill">Media & Events</span>
+          <span class="skill-pill">Media &amp; Events</span>
           <span class="skill-pill">Health Tech</span>
+          <span class="skill-pill">Education</span>
+          <span class="skill-pill">Data &amp; Analytics</span>
+          <span class="skill-pill">Cyber Security</span>
+          <span class="skill-pill">Fashion</span>
+          <span class="skill-pill">Non Profit</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- <!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="section-inner">
-    <div class="section-eyebrow">Kind words</div>
-    <h2 style="color:white;margin-bottom:2.5rem;">What people say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <blockquote>"Add a testimonial from a former colleague or manager here — LinkedIn recommendations are a great source for these."</blockquote>
-        <div class="testimonial-author">Name, Title</div>
-        <div class="testimonial-note">Company · Relationship</div>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>"A second testimonial that speaks to your cross-functional or operational strengths works well here."</blockquote>
-        <div class="testimonial-author">Name, Title</div>
-        <div class="testimonial-note">Company · Relationship</div>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>"A third from a client or stakeholder — especially one from an agency engagement — adds strong social proof for fractional work."</blockquote>
-        <div class="testimonial-author">Name, Title</div>
-        <div class="testimonial-note">Company · Relationship</div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-eyebrow">Let's work together</div>
-    <h2>Open to fractional & contract engagements</h2>
+    <h2>Open to fractional &amp; contract engagements</h2>
     <p class="section-lead">Available for project management, product management, and GTM operations work. Typically 10–20 hours per week, with flexibility based on your team's needs.</p>
     <div class="contact-links">
       <a href="mailto:nicolecfalzon@gmail.com" class="contact-link contact-link-white">✉️ Send me an email</a>
