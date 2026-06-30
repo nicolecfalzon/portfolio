@@ -206,7 +206,7 @@
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1.6fr;
-      height: 340px;
+      height: 380px;
       transition: box-shadow 0.2s;
     }
     .case-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
@@ -301,7 +301,7 @@
       transition: background 0.15s, transform 0.15s;
     }
     .carousel-dot.active { background: #fff; transform: scale(1.2); }
-    .case-body { padding: 2.25rem 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .case-body { height: 100%; padding: 1.75rem 2.25rem; display: flex; flex-direction: column; justify-content: center; overflow-y: auto; }
     .case-company {
       font-size: 0.7rem;
       font-weight: 600;
@@ -317,7 +317,7 @@
       margin-bottom: 0.75rem;
       color: var(--ink);
     }
-    .case-body p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
+    .case-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.85rem; }
     .case-meta {
       display: flex;
       flex-wrap: wrap;
@@ -417,6 +417,7 @@
       section { padding: 4rem 1.25rem; }
       .case-card { grid-template-columns: 1fr; height: auto; }
       .case-img { border-right: none; border-bottom: 1px solid var(--border); height: 220px; }
+      .case-body { overflow-y: visible; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .hero { padding: 4rem 1.25rem 3rem; }
     }
