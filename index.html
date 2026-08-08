@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole Falzon — Fractional PM & Operations Leader</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -351,9 +352,39 @@
       gap: 4rem;
       align-items: start;
     }
-    .about-grid-single {
-      grid-template-columns: 1fr;
-      max-width: 640px;
+    .about-grid-photo {
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 100%;
+      height: 100%;
+      background: var(--warm);
+      opacity: 0.18;
+      border-radius: 14px;
+      z-index: 0;
+    }
+    .about-photo {
+      position: relative;
+      z-index: 1;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      border: 1px solid var(--border);
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .about-text p {
       font-size: 0.97rem;
@@ -404,6 +435,8 @@
       .case-img { border-right: none; border-bottom: 1px solid var(--border); height: 220px; }
       .case-body { overflow-y: visible; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-grid-photo { grid-template-columns: 1fr; }
+      .about-photo-wrap { max-width: 240px; margin: 0 auto; }
       .hero { padding: 4rem 1.25rem 3rem; }
     }
 
@@ -568,10 +601,16 @@
   <div class="section-inner">
     <div class="section-eyebrow">About me</div>
     <h2>Execution is my <em style="font-style:italic;color:var(--accent)">superpower</em></h2>
-    <div class="about-grid about-grid-single">
+    <div class="about-grid about-grid-photo">
+      <div class="about-photo-wrap">
+        <div class="about-photo">
+          <img src="images/nicole-headshot.jpg" alt="Nicole Falzon" />
+        </div>
+      </div>
       <div class="about-text">
-        <p>I bring 10+ years of experience at the intersection of operations, project management, and product helping fast-moving teams turn ideas into execution. I partner with companies on project management, product strategy and operations, and AI-powered workflows; whether that means leading a complex initiative, improving how a team works, managing ongoing product delivery, or identifying opportunities to automate manual processes.</p>
-        <p>I thrive in fast-paced environments where I can jump in, bring structure to ambiguity, connect the dots across teams, and keep work moving forward. My goal is to build smarter processes, deliver meaningful outcomes, and make it easier for teams to focus on the work that creates the most value.</p>
+        <p>I've spent 10+ years working at the intersection of operations and product, helping high-growth companies turn ideas into execution. My career has been built around stepping into fast-moving, often ambiguous environments, figuring out what needs to happen, and bringing the right people together to make it happen.</p>
+        <p>I'm energized by solving complex problems, building smarter systems, and finding better ways of working. I love connecting the dots between business goals, customer needs, and execution.</p>
+        <p>I do my best work with collaborative, fast-moving teams that care about what they're building and value people who are willing to roll up their sleeves and get things done.</p>
       </div>
     </div>
   </div>
