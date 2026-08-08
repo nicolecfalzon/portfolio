@@ -352,6 +352,10 @@
       gap: 4rem;
       align-items: start;
     }
+    .about-grid-single {
+      grid-template-columns: 1fr;
+      max-width: 640px;
+    }
     .about-text p {
       font-size: 0.97rem;
       color: var(--muted);
@@ -359,25 +363,6 @@
       margin-bottom: 1.1rem;
     }
     .about-text p:last-child { margin-bottom: 0; }
-    .about-skills h4 {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .about-skills h4:first-child { margin-top: 0; }
-    .skills-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .skill-pill {
-      font-size: 0.78rem;
-      padding: 4px 12px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      color: var(--ink);
-      background: var(--white);
-    }
 
     /* ── CONTACT ── */
     #contact { background: var(--accent); }
@@ -447,7 +432,7 @@
     <div class="hero-eyebrow">Strategy, systems and execution</div>
     <h1>Fractional PM &amp; Operations Leader</h1>
     <p class="hero-sub">
-      From project management, sprint operations and product strategy to GTM systems and cross-functional alignment, I can assist your team wherever needed. I partner with start-ups as well as product, digital, and growth agencies to drive execution and move projects forward.
+      From project management and operations support to product strategy, system configuration, and AI-assisted workflows, I can jump in wherever your team needs extra support. I partner with startups and product, digital, and growth agencies to drive execution and keep projects moving forward.
     </p>
     <div class="hero-ctas">
       <a href="#work" class="btn btn-primary">See my work</a>
@@ -465,21 +450,21 @@
     <div class="services-grid">
 
       <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <h3>Product Management</h3>
-        <p>I help teams from discovery through launch including roadmap planning, product requirements, strategy &amp; vision, sprint facilitation, and cross-functional delivery.</p>
-      </div>
-
-      <div class="service-card">
         <div class="service-icon">📊</div>
         <h3>Program &amp; Delivery</h3>
         <p>End-to-end project leadership for complex, multi-stakeholder initiatives. I keep distributed teams aligned, scope in check, and execution on track.</p>
       </div>
 
       <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Product Management</h3>
+        <p>I help teams from discovery through launch including roadmap planning, product requirements, strategy &amp; vision, sprint facilitation, and cross-functional delivery.</p>
+      </div>
+
+      <div class="service-card">
         <div class="service-icon">⚙️</div>
-        <h3>GTM Operations</h3>
-        <p>I help lay the operational foundation for your go-to-market strategy including CRM infrastructure, customer journey workflows &amp; processes, dashboard &amp; analytics configuration, and AI best practices.</p>
+        <h3>AI &amp; Automation Support</h3>
+        <p>I help teams identify practical ways to use AI to work smarter, move faster, and reduce manual effort. From auditing existing processes to prototyping AI-assisted workflows, I'll help eliminate repetitive work and give your team more time to focus on what matters most.</p>
       </div>
 
     </div>
@@ -491,7 +476,7 @@
   <div class="section-inner">
     <div class="section-eyebrow">Selected work</div>
     <h2>Where I've driven impact</h2>
-    <p class="section-lead">A look at the types of problems I've owned from full website redesigns to CRM transformations and ongoing product delivery.</p>
+    <p class="section-lead">A look at the types of problems I've owned from full website redesigns and product management support to marketing operations, CRM transformations, and ongoing product delivery.</p>
 
     <div class="case-studies">
 
@@ -511,9 +496,9 @@
           </div>
         </div>
         <div class="case-body">
-          <div class="case-company">Designs for Health · Project &amp; Product Manager</div>
+          <div class="case-company">Designs for Health · Project Manager</div>
           <h3>eCommerce website redesign with end-to-end checkout optimization</h3>
-          <p>Led product discovery, strategy, and a full website redesign focused on eCommerce performance. Improved search, guest checkout, account creation, streamlined purchase flows and added additional payment methods to boost revenue. Owned discovery &amp; PRD, sprint planning, development build out, UAT, and launch.</p>
+          <p>Led product discovery, strategy, and a full website redesign focused on eCommerce performance. Improved search, guest checkout, account creation, streamlined purchase flows and added additional payment methods to boost revenue. Owned discovery &amp; PRD, design operations, sprint planning, development build out, UAT, and launch.</p>
           <div class="case-meta">
             <span class="meta-pill">📅 1 year</span>
             <span class="meta-pill">👥 10 engineers · 3 designers</span>
@@ -540,12 +525,12 @@
           </div>
         </div>
         <div class="case-body">
-          <div class="case-company">NKBA · Project, Product Manager &amp; Analyst</div>
+          <div class="case-company">NKBA · Product Manager &amp; Analyst</div>
           <h3>Ongoing product delivery &amp; analytics oversight for NKBA</h3>
           <p>Roadmap oversight, sprint operations, product backlog and data analysis across a two-year engagement. Key projects include redesigning the member signup and renewal experience, enhancing search, connecting users with certified pros, and Tableau executive dashboard build out.</p>
           <div class="case-meta">
             <span class="meta-pill">📅 2 years</span>
-            <span class="meta-pill">👥 5 engineers · 1 designer</span>
+            <span class="meta-pill">👥 5 engineers · 2 designers</span>
             <span class="meta-pill">Membership &amp; Association</span>
           </div>
         </div>
@@ -584,55 +569,10 @@
   <div class="section-inner">
     <div class="section-eyebrow">About me</div>
     <h2>Execution is my <em style="font-style:italic;color:var(--accent)">superpower</em></h2>
-    <div class="about-grid">
+    <div class="about-grid about-grid-single">
       <div class="about-text">
-        <p>I've spent 10+ years working at the intersection of operations and product, helping high-growth companies turn strategy into execution. My career has been built around stepping into fast-moving environments, identifying what needs to be built, and leading cross-functional teams to deliver meaningful outcomes.</p>
-        <p>I'm energized by solving complex operational and product challenges and building scalable systems and workflows. Whether launching new products, optimizing internal operations, or improving customer experiences, I enjoy connecting the dots between business strategy, user needs, and execution.</p>
-        <p>I do my best work with teams that move fast, embrace collaboration, and care deeply about building products and processes that create real value for customers.</p>
-      </div>
-      <div class="about-skills">
-        <h4>Operations</h4>
-        <div class="skills-list">
-          <span class="skill-pill">Project Management</span>
-          <span class="skill-pill">Program Management</span>
-          <span class="skill-pill">Process Design</span>
-          <span class="skill-pill">Roadmapping</span>
-          <span class="skill-pill">Sprint Facilitation</span>
-          <span class="skill-pill">GTM Operations</span>
-          <span class="skill-pill">Customer Lifecycle</span>
-          <span class="skill-pill">Cross-functional Alignment</span>
-          <span class="skill-pill">Stakeholder Management</span>
-        </div>
-        <h4>Tools &amp; Platforms</h4>
-        <div class="skills-list">
-          <span class="skill-pill">Claude</span>
-          <span class="skill-pill">Replit</span>
-          <span class="skill-pill">Notion</span>
-          <span class="skill-pill">Salesforce</span>
-          <span class="skill-pill">HubSpot</span>
-          <span class="skill-pill">Jira</span>
-          <span class="skill-pill">Asana</span>
-          <span class="skill-pill">Airtable</span>
-          <span class="skill-pill">Figma</span>
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">Looker</span>
-          <span class="skill-pill">Sisense</span>
-          <span class="skill-pill">Tableau</span>
-          <span class="skill-pill">Zapier</span>
-        </div>
-        <h4>Industries</h4>
-        <div class="skills-list">
-          <span class="skill-pill">Digital Agencies</span>
-          <span class="skill-pill">Health &amp; Wellness</span>
-          <span class="skill-pill">SaaS / Marketplace</span>
-          <span class="skill-pill">eCommerce</span>
-          <span class="skill-pill">Media &amp; Events</span>
-          <span class="skill-pill">Education</span>
-          <span class="skill-pill">Data &amp; Analytics</span>
-          <span class="skill-pill">Cyber Security</span>
-          <span class="skill-pill">Fashion</span>
-          <span class="skill-pill">Non Profit</span>
-        </div>
+        <p>I bring 10+ years of experience at the intersection of operations, project management, and product helping fast-moving teams turn ideas into execution. I partner with companies on project management, product strategy and operations, and AI-powered workflows; whether that means leading a complex initiative, improving how a team works, managing ongoing product delivery, or identifying opportunities to automate manual processes.</p>
+        <p>I thrive in fast-paced environments where I can jump in, bring structure to ambiguity, connect the dots across teams, and keep work moving forward. My goal is to build smarter processes, deliver meaningful outcomes, and make it easier for teams to focus on the work that creates the most value.</p>
       </div>
     </div>
   </div>
@@ -642,8 +582,8 @@
 <section id="contact">
   <div class="section-inner">
     <div class="section-eyebrow">Let's work together</div>
-    <h2>Open to fractional &amp; contract engagements</h2>
-    <p class="section-lead">Available for project management, product management, and GTM operations work. Typically 10–20 hours per week, with flexibility based on your team's needs.</p>
+    <h2>Need an extra set of hands? Let's chat.</h2>
+    <p class="section-lead">Every team's needs are different, so I'm flexible in how we work together, whether you need support for a specific project, a few hours a week, or ongoing fractional help. If you think I could be useful to your team, I'd love to connect and explore how we could work together.</p>
     <div class="contact-links">
       <a href="mailto:nicolecfalzon@gmail.com" class="contact-link contact-link-white">✉️ Send me an email</a>
       <a href="https://www.linkedin.com/in/nicole-falzon" target="_blank" rel="noopener" class="contact-link contact-link-outline">LinkedIn →</a>
